@@ -57,4 +57,4 @@ if (config['method'] == 'tcp'):
             print(f'{config["ip"]}:{config["port"]} seq={seq} status=online time={str(start - end)[1:6]} ms')
         except:
             end = time.time()
-            print(f'{config["ip"]}{config["port"]}: seq={seq} status=offline time={str(start - end)[0:6]} ms')
+            print(f'{config["ip"]}:{config["port"]} seq={seq} status=offline time={str(start - end)[1:6]} ms')
