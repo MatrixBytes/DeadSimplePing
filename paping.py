@@ -35,9 +35,9 @@ if (config['method'] == '') or config['method'] == 'icmp':
         end = time.time()
 
         if '0 received' in result:
-            print(f'{config["ip"]}:icmp seq={seq} status=online time={str(start - end)[0:6]} ms')
+            print(f'{config["ip"]}:icmp seq={seq} status=offline time={str(start - end)[1:6]} ms')
         if '1 received' in result:
-            print(f'{config["ip"]}:icmp seq={seq} status=offline time={str(start - end)[0:6]} ms')
+            print(f'{config["ip"]}:icmp seq={seq} status=online time={str(start - end)[1:6]} ms')
 
 if (config['method'] == 'tcp'):
     seq = 0
